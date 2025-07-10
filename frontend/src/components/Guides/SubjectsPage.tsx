@@ -8,7 +8,7 @@ import { useParams } from "next/navigation";
 import { useRouter } from "next/router";
 
 const SubjectsPage: React.FC = () => {
-  const { grade } = useParams<{ grade: string }>();
+  const { grade } = useParams<{ grade: any }>();
   const navigate = useRouter();
   const [subjects, setSubjects] = useState(getSubjectsByGrade(grade || "9"));
   const [availableGrades] = useState(getAvailableGrades());
@@ -32,7 +32,7 @@ const SubjectsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-yellow-50 to-orange-50">
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -57,7 +57,7 @@ const SubjectsPage: React.FC = () => {
               key={index}
               className="bg-white rounded-xl p-6 shadow-sm text-center"
             >
-              <stat.icon className="w-8 h-8 mx-auto text-amber-500 mb-2" />
+              <stat.icon className="w-8 h-8 mx-auto text-emerald-500 mb-2" />
               <div className="text-2xl font-bold text-gray-900">
                 {stat.value}
               </div>
@@ -79,7 +79,7 @@ const SubjectsPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {subjects.map((subject) => (
                 <SubjectCard key={subject.id} subject={subject} />
               ))}
@@ -104,8 +104,8 @@ const SubjectsPage: React.FC = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="w-8 h-8 text-amber-500" />
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="w-8 h-8 text-emerald-500" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">
                 Interactive Learning
@@ -116,8 +116,8 @@ const SubjectsPage: React.FC = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-amber-500" />
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-emerald-500" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">
                 Progress Tracking
@@ -128,8 +128,8 @@ const SubjectsPage: React.FC = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-amber-500" />
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-emerald-500" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">
                 Certification

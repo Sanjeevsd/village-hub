@@ -259,15 +259,15 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link
-            href="/guides"
+            href="/"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-xl flex items-center justify-center shadow-lg">
+            <div className="w-10 h-10 bg-gradient-to-r from-emerald-400 to-yellow-500 rounded-xl flex items-center justify-center shadow-lg">
               <GraduationCap className="w-6 h-6 text-white" />
             </div>
-            <div className="hidden sm:block">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
-                EduHub
+            <div className="block">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-emerald-500 to-orange-500 bg-clip-text text-transparent">
+                VillageHub
               </h1>
               <p className="text-xs text-gray-500 -mt-1">Learning Excellence</p>
             </div>
@@ -283,10 +283,10 @@ const Header: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-amber-50 group ${
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-emerald-50 group ${
                     isActive(item.name, item.dropdown)
-                      ? "text-amber-600 bg-amber-50"
-                      : "text-gray-700 hover:text-amber-600"
+                      ? "text-emerald-600 bg-emerald-50"
+                      : "text-gray-700 hover:text-emerald-600"
                   }`}
                 >
                   <item.icon className="w-4 h-4" />
@@ -300,15 +300,15 @@ const Header: React.FC = () => {
 
                 {/* Dropdown Menu */}
                 {activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
+                  <div className="absolute top-full left-0 mt-0 w-72 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
                     {item.dropdown.map((dropdownItem) => (
                       <Link
                         key={dropdownItem.path}
                         href={dropdownItem.path}
-                        className="flex items-start gap-3 px-4 py-3 hover:bg-amber-50 transition-colors duration-200 group"
+                        className="flex items-start gap-3 px-4 py-3 hover:bg-emerald-50 transition-colors duration-200 group"
                       >
-                        <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center group-hover:bg-amber-200 transition-colors duration-200">
-                          <dropdownItem.icon className="w-4 h-4 text-amber-600" />
+                        <div className="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center group-hover:bg-emerald-200 transition-colors duration-200">
+                          <dropdownItem.icon className="w-4 h-4 text-emerald-600" />
                         </div>
                         <div className="flex-1">
                           <div className="font-medium text-gray-900 text-sm">
@@ -346,7 +346,7 @@ const Header: React.FC = () => {
               {menuItems.map((item) => (
                 <div key={item.name} className="space-y-2">
                   <div className="flex items-center gap-3 px-4 py-2 font-semibold text-gray-900">
-                    <item.icon className="w-5 h-5 text-amber-500" />
+                    <item.icon className="w-5 h-5 text-emerald-500" />
                     <span>{item.name}</span>
                   </div>
                   <div className="pl-8 space-y-1">
@@ -355,7 +355,7 @@ const Header: React.FC = () => {
                         key={dropdownItem.path}
                         href={dropdownItem.path}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:text-amber-600 hover:bg-amber-50 transition-all duration-200"
+                        className="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-200"
                       >
                         <dropdownItem.icon className="w-4 h-4" />
                         <div>

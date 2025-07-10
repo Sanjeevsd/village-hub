@@ -1,5 +1,5 @@
-import React from 'react';
-import { ChevronRight, GraduationCap } from 'lucide-react';
+import React from "react";
+import { ChevronRight, GraduationCap } from "lucide-react";
 
 interface GradeBreadcrumbProps {
   currentGrade: string;
@@ -7,14 +7,14 @@ interface GradeBreadcrumbProps {
   onGradeChange: (grade: string) => void;
 }
 
-const GradeBreadcrumb: React.FC<GradeBreadcrumbProps> = ({ 
-  currentGrade, 
-  availableGrades, 
-  onGradeChange 
+const GradeBreadcrumb: React.FC<GradeBreadcrumbProps> = ({
+  currentGrade,
+  availableGrades,
+  onGradeChange,
 }) => {
   return (
     <div className="flex items-center gap-2 mb-8">
-      <GraduationCap className="w-5 h-5 text-amber-500" />
+      <GraduationCap className="w-5 h-5 text-emerald-500" />
       <span className="text-gray-600">Grade</span>
       <ChevronRight className="w-4 h-4 text-gray-400" />
       <div className="flex gap-2">
@@ -24,8 +24,8 @@ const GradeBreadcrumb: React.FC<GradeBreadcrumbProps> = ({
             onClick={() => onGradeChange(grade)}
             className={`px-3 py-1 rounded-lg font-medium transition-colors duration-200 ${
               grade === currentGrade
-                ? 'bg-amber-500 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ? "bg-emerald-500 text-white"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             }`}
           >
             {grade}

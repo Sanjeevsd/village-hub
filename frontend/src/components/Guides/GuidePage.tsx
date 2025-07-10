@@ -55,8 +55,8 @@ const gradeData: GradeInfo[] = [
     ],
     difficulty: "Foundation",
     icon: Lightbulb,
-    color: "from-amber-400 to-yellow-500",
-    bgGradient: "from-amber-50 to-yellow-50",
+    color: "from-emerald-400 to-yellow-500",
+    bgGradient: "from-emerald-50 to-yellow-50",
     stats: { subjects: 5, hours: "120+", projects: 15 },
   },
   {
@@ -85,8 +85,8 @@ const gradeData: GradeInfo[] = [
     ],
     difficulty: "Intermediate",
     icon: Brain,
-    color: "from-orange-400 to-amber-500",
-    bgGradient: "from-orange-50 to-amber-50",
+    color: "from-orange-400 to-emerald-500",
+    bgGradient: "from-orange-50 to-emerald-50",
     stats: { subjects: 6, hours: "150+", projects: 20 },
   },
   {
@@ -145,8 +145,8 @@ const gradeData: GradeInfo[] = [
     ],
     difficulty: "Expert",
     icon: Trophy,
-    color: "from-amber-500 to-orange-600",
-    bgGradient: "from-amber-50 to-orange-100",
+    color: "from-emerald-500 to-orange-600",
+    bgGradient: "from-emerald-50 to-orange-100",
     stats: { subjects: 10, hours: "250+", projects: 30 },
   },
 ];
@@ -174,9 +174,9 @@ const GuidePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-yellow-50 to-orange-50">
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400">
+      <div className="relative overflow-hidden bg-gradient-to-r from-emerald-400 via-yellow-400 to-orange-400">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative container mx-auto px-4 py-16 text-center">
           <div className="max-w-4xl mx-auto">
@@ -215,22 +215,22 @@ const GuidePage: React.FC = () => {
         {/* Overview Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-            <Target className="w-8 h-8 mx-auto text-amber-500 mb-3" />
+            <Target className="w-8 h-8 mx-auto text-emerald-500 mb-3" />
             <div className="text-2xl font-bold text-gray-900">4</div>
             <div className="text-sm text-gray-600">Grade Levels</div>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-            <BookOpen className="w-8 h-8 mx-auto text-amber-500 mb-3" />
+            <BookOpen className="w-8 h-8 mx-auto text-emerald-500 mb-3" />
             <div className="text-2xl font-bold text-gray-900">29</div>
             <div className="text-sm text-gray-600">Total Subjects</div>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-            <Clock className="w-8 h-8 mx-auto text-amber-500 mb-3" />
+            <Clock className="w-8 h-8 mx-auto text-emerald-500 mb-3" />
             <div className="text-2xl font-bold text-gray-900">720+</div>
             <div className="text-sm text-gray-600">Learning Hours</div>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-            <TrendingUp className="w-8 h-8 mx-auto text-amber-500 mb-3" />
+            <TrendingUp className="w-8 h-8 mx-auto text-emerald-500 mb-3" />
             <div className="text-2xl font-bold text-gray-900">90</div>
             <div className="text-sm text-gray-600">Projects</div>
           </div>
@@ -276,7 +276,7 @@ const GuidePage: React.FC = () => {
                             {grade.difficulty}
                           </span>
                         </div>
-                        <h4 className="text-xl font-semibold text-amber-600">
+                        <h4 className="text-xl font-semibold text-emerald-600">
                           {grade.title}
                         </h4>
                       </div>
@@ -289,14 +289,14 @@ const GuidePage: React.FC = () => {
                     {/* Key Focus Areas */}
                     <div className="mb-6">
                       <h5 className="font-semibold text-gray-900 mb-3 flex items-center">
-                        <Star className="w-4 h-4 mr-2 text-amber-500" />
+                        <Star className="w-4 h-4 mr-2 text-emerald-500" />
                         Key Focus Areas
                       </h5>
                       <div className="flex flex-wrap gap-2">
                         {grade.keyFocus.map((focus, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-amber-100 text-amber-800 rounded-lg text-sm font-medium"
+                            className="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-medium"
                           >
                             {focus}
                           </span>
@@ -307,7 +307,7 @@ const GuidePage: React.FC = () => {
                     {/* Learning Outcomes */}
                     <div className="mb-8">
                       <h5 className="font-semibold text-gray-900 mb-3 flex items-center">
-                        <Target className="w-4 h-4 mr-2 text-amber-500" />
+                        <Target className="w-4 h-4 mr-2 text-emerald-500" />
                         Learning Outcomes
                       </h5>
                       <ul className="space-y-2">
@@ -316,7 +316,7 @@ const GuidePage: React.FC = () => {
                             key={idx}
                             className="flex items-start gap-2 text-gray-700"
                           >
-                            <div className="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
                             {outcome}
                           </li>
                         ))}
@@ -359,7 +359,7 @@ const GuidePage: React.FC = () => {
                     {/* Subjects List */}
                     <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6">
                       <h5 className="font-semibold text-gray-900 mb-4 flex items-center">
-                        <BookOpen className="w-4 h-4 mr-2 text-amber-500" />
+                        <BookOpen className="w-4 h-4 mr-2 text-emerald-500" />
                         Available Subjects
                       </h5>
                       <div className="grid grid-cols-1 gap-3">
@@ -386,7 +386,7 @@ const GuidePage: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-20 bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 rounded-2xl p-12 text-center text-white">
+        <div className="mt-20 bg-gradient-to-r from-emerald-400 via-yellow-400 to-orange-400 rounded-2xl p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Start Your Learning Journey?
           </h2>

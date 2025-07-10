@@ -170,7 +170,7 @@ const SubjectCard: React.FC<SubjectCardProps> = ({ subject }) => {
             {subject.topics.map((topic, index) => (
               <span
                 key={index}
-                className="px-2 py-1 bg-amber-50 text-amber-700 rounded-lg text-xs font-medium"
+                className="px-2 py-1 bg-emerald-50 text-emerald-700 rounded-lg text-xs font-medium"
               >
                 {topic}
               </span>
@@ -179,7 +179,7 @@ const SubjectCard: React.FC<SubjectCardProps> = ({ subject }) => {
         </div>
 
         <div className="flex gap-3">
-          <button className="flex-1 bg-amber-500 hover:bg-amber-600 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2">
+          <button className="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2">
             <Star className="w-4 h-4" />
             Start Learning
           </button>
